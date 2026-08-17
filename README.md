@@ -1,37 +1,44 @@
-# S.Kendra
+# Kendra — Open Source Company Knowledge Base with Citations
 
-**Simple name:** Kendra
+**Kendra** is an open-source **internal search / RAG desk**. Ask a question about the company. Get an answer with citations from the library — not a hallucinated wiki.
 
-Company knowledge Q&A with citations.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-This is a Grok App Builder project. The sandbox npm name was `app-builder-workspace`. On GitHub it is **S.Kendra** (private).
+## Features
 
-## Run on this Mac
+- Ask box with hybrid retrieve → rerank → cite
+- Library + admin + audit + evals
+- Suggested queries from the corpus
+- Thumbs up / down on answers
+- Built as “SwiftRoute Knowledge” in the demo corpus
 
-Need **Node.js 22** and **npm**. Postgres is not required (uses PGLite in the browser/process).
+## Who it is for
+
+- Ops / CX teams tired of tribal Slack answers
+- Developers building **citation-first RAG**
+- Companies that need an **internal Q&A** without leaking docs to a public bot
+
+## Quick start
 
 ```bash
-cd "/Users/akshitpareta/Documents/S-projects/S.Kendra"
+git clone https://github.com/Akshit1018/S.Kendra.git
+cd S.Kendra
 npm install
-npm run dev
-```
-
-Open http://127.0.0.1:8080
-
-To skip Grok login in local preview:
-
-```bash
 VITE_AUTH_ENABLED=false npm run dev
 ```
 
-Optional AI (only if this app calls Grok): set `XAI_API_KEY`.
+Open [http://127.0.0.1:8080](http://127.0.0.1:8080).
 
-## Scripts
+Optional: `XAI_API_KEY` for live model answers. Without it, the retrieval path still runs on the bundled corpus.
 
-- `npm run dev` — Vite on port 8080
-- `npm run build` — production build + DB migrate (skipped without DATABASE_URL)
-- `npm run typecheck`
+## Tech stack
 
-## Notes
+React 19 · TanStack Start · Vite · Tailwind · in-app knowledge corpus
 
-Do not commit `.env`, `node_modules`, or `.grok/`.
+## License
+
+[MIT](LICENSE)
+
+## Keywords
+
+company knowledge base, RAG with citations, internal Q&A, enterprise search open source, cited answers, employee wiki search
